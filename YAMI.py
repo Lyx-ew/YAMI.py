@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.set_page_config(page_title="Bienestar integral", page_icon="🧘", layout="centered")
-st.title("Evaluación de Autocuidado")
+st.set_page_config(page_title="Bienestar integral🌿", page_icon="🧘", layout="centered")
+st.title("Evaluación de Autocuidado❤️‍🩹")
 
-st.write("Por favor, responde del 1 al 5 cada afirmación, donde:\n- **1 = Nunca**\n- **5 = Siempre**")
+st.write("Por favor, responde del 1 al 5 cada afirmación, donde:\n- **1 = Nunca**\n- **2 = Casi nunca\n- **3 = A veces\n- **4 = Casi siempre\n- **5 = Siempre**")
 
 # Preguntas
 preguntas = [
@@ -30,6 +30,7 @@ respuestas = []
 for pregunta in preguntas:
     valor = st.slider(pregunta, 1, 5, 3)
     respuestas.append(valor)
+    st.markdown("<div style='margin-top: -10px; margin-bottom: 20px;'></div>", unsafe_allow_html=True)
 
 # Botón para calcular resultado
 if st.button("Calcular promedio"):
